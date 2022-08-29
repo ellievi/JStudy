@@ -22,31 +22,6 @@ const Br = new Human("Brazilian","portuguese") //doing parametres
 
 Br.showHuman() //fusion of the phrase and parametre's setup
 
-////////////////////////////////////////////////////////////////////////
-
-
-// cachorro
-// CACHORRO
-// class Dog { //cration of the class
-//     constructor({breed,height}){ //creation of the constructor with the attributes
-//         this.breed = breed //first attribute
-//         this.height = height //second attribute
-//     }
-
-//     SetBreed = (breed) => this.breed = breed
-//     SetHeight = (height) => this.height = height
-    
-//     showDog = () => { //phrase method
-//         console.log(`The dog breed is ${this.breed} and the height is ${this.height} cm.`)
-//     } //console of the phrase
-// }
-
-// const Doguinho = new Dog({breed:"Caramelo", height: "42"})
-
-// Doguinho.showDog()
-
-///////////////////////////////////////////////////////////////////////
-
 
 // carro
 class Car{ //creation of the class
@@ -172,3 +147,27 @@ const jogo2 = showGamesInfoYear('League of Legends')
 console.log(jogo2.getInfo());
 const jogo3 = showGamesInfoYear('New Super Mario Bros. Wii')
 console.log(jogo3.getInfo());
+
+//Animation
+class Animation{
+    constructor(title2,release,classification){
+        this.title2 = title2;
+        this.release = release;
+        this.classification = classification;
+    }
+    getInfo(){
+        return{
+            Title: this.title2,
+            Release: this.release,
+            Classification: this.classification,
+        };
+    }
+}
+const showAnimation = (title2,release,classification) => new Animation(title2,release,classification);
+const makeAnimationNew = (title2,classification) => new Animation(title2,2021,classification);
+
+const cartoon1 = makeAnimationNew('Arcane','14')
+console.log(cartoon1.getInfo())
+
+const cartoon2 = showAnimation('The Incredibles',2004,'free')
+console.log(cartoon2.getInfo())
