@@ -27,6 +27,7 @@ class Bruno3 {
     showInfos = () => console.log(`classe: Bruno 3, this.name: ${this.name}, this.age: ${this.age}`)
 }
 const payload3 =  { name: 'Bruno' , age: 35 }
+
 const bruno3 = new Bruno3(payload3)
 //trabnalhando com um array e seus valores
 class Bruno4 {

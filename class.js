@@ -1,10 +1,10 @@
 class DateFormat{
 
-    // Atributo ou variável da classe sendo iniciada com o valor null
+    // Atributo ou variável da classe sendo iniciada com o valor new Date()
     date = new Date();
 
     constructor(info){
-        this.date =  new Date(info.date);
+        this.date = info.date;
         // O atributo color será criado na classe dinamicamente
         // pois ela não existe igual ao atributo date
         this.color = info.color;
@@ -34,3 +34,13 @@ const somarNum = dateFormat.sum(10, 20)
 console.log(showBrFormat);
 console.log(showColorData);
 console.log(somarNum)
+
+
+class Cachorro{
+    constructor(info){
+        this.raca = info.raca;
+        this.cor = info.cor;
+    }
+
+    
+}
