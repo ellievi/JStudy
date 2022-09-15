@@ -18,6 +18,7 @@ class DateFormat{
 
 // Criando um objeto com duas propriedades (date, color)
 const payload = {date: new Date(), color: 'azul'}
+
 // Instanciando a classe DateFormat 
 // Passando a variável payload como conteúdo
 // E atribuindo tudo à variável dateFormat
@@ -35,12 +36,6 @@ console.log(showBrFormat);
 console.log(showColorData);
 console.log(somarNum)
 
-
 class Cachorro{
-    constructor(info){
-        this.raca = info.raca;
-        this.cor = info.cor;
-    }
-
     
 }
