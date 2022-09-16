@@ -1,41 +1,40 @@
 class DateFormat{
-
-    // Atributo ou variável da classe sendo iniciada com o valor new Date()
+    // Creation of the attribute date = new Date(_) to use later
     date = new Date();
 
+    // Creation of the constructor as an object with info for him parametres
     constructor(info){
         this.date = info.date;
-        // O atributo color será criado na classe dinamicamente
-        // pois ela não existe igual ao atributo date
-        this.color = info.color;
     };
-
-    sum = (numero1, numero2) => (numero1 + numero2)
-
-    formatToBrazilianDate = () => `${this.date.getDate()}/${this.date.getMonth() +1}/${this.date.getFullYear()}`
-    showColor = () => `Cor: ${this.color}`;
-}
-
-// Criando um objeto com duas propriedades (date, color)
-const payload = {date: new Date(), color: 'azul'}
-
-// Instanciando a classe DateFormat 
-// Passando a variável payload como conteúdo
-// E atribuindo tudo à variável dateFormat
-const dateFormat = new DateFormat(payload);
-
-// Atribuindo a variável showBrFormat o retorno do método formatToBrazilianDate
-const showBrFormat = dateFormat.formatToBrazilianDate();
-// Atribuindo a variável showColorData o retorno do método showColor
-const showColorData = dateFormat.showColor();
-
-const somarNum = dateFormat.sum(10, 20)
-
-// Impressão das variáveis já com o método atribuído
-console.log(showBrFormat);
-console.log(showColorData);
-console.log(somarNum)
-
-class Cachorro{
     
+    // Creation of the methods - 1/3 -
+    // Convert date to milliseconds
+    formatDateToMs = () => `${this.date.getTime()}`
+
+    // Creation of the methods - 2/3 -
+    // Add hours, minute, second, day, month or year
+    addHoursToDate = () => `${this.date.getHours + 2}`
+
+    // Creation of the methods - 3/3 -
+    // Format to brazilian's date standard
+    formatToBrazilianDate = () => `${this.date.getDate()}/${this.date.getMonth() + 1}/${this.date.getFullYear()}`;
 }
+
+// Creation of an obje'ct that carry the data info abt the date
+const dataChest = {Date: new Date()};
+
+// Creation of the base instance for the others instances
+const dateFormatInstance = new DateFormat(dataChest);
+
+// Creation of the instance - 1/3 -
+const showDateToMsFormat = dateFormatInstance.formatDateToMs();
+
+// Creation of the instance - 2/3 -
+
+
+// Creation of the instance - 3/3 -
+const showBrazilianFormat = dateFormatInstance.formatToBrazilianDate();
+
+// Instance's console log
+console.log(showDateToMsFormat);
+console.log(showBrazilianFormat);
