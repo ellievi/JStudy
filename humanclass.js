@@ -50,14 +50,20 @@ class Human{
     //e o this.age direto da classe
     multiply2 = (param) => `${this.age * param.age}`
 
+    // Método com parâmetro interno e externo para pegar altura e idade do parâmetro criado dinâmicamente
+    //e idade do ''this.age'' criado na classe
+    heightAge = (param) => `${param.altura} ${this.age} ${this.age * param.age}` 
+
     // Método com os parâmetros ''person1'' e ''person2'' com os atributos criados dinâmicamente
     // ''name'' e ''age'' para os dois.
     nameAgeTwoPerson = (person1, person2) => `${person1.name} ${person1.age} ${person2.name} ${person2.age}`
+
 }
 
 const humanInstance1 = new Human({name: 'Elisama', age: '19', birthday: new Date('2003-04-10')});
 const humanInstance2 = new Human({name: 'Antonio', age: '80', birthday: new Date('1942-06-20')});
 const humanInstance3 = new Human({name: 'Julia', birthday: new Date('1997-01-10')});
+const humanInstance4 = new Human({age: 18})
 
 // console.log(humanInstance1);
 // console.log(humanInstance2);
@@ -71,4 +77,5 @@ const humanInstance3 = new Human({name: 'Julia', birthday: new Date('1997-01-10'
 // console.log(humanInstance3.updateNameYear({name: 'Carlos', year: 1989}))
 // console.log(humanInstance2.multiply({age: 2}))
 // console.log(humanInstance2.multiply2({age: 2}))
+// console.log(humanInstance4.example({altura: 1.64, age: 2}))
 console.log(humanInstance1.nameAgeTwoPerson({name: 'Ana', age: '40'}, {name: 'Marilia', age: '20'}))
