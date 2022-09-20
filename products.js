@@ -1,11 +1,16 @@
-class Products{
-    constructor(){
-        this.foodList = [foodList];
-        this.clotheList = [clotheList];
-    }
-    
-    exemplo = (foodList) => foodList.Products
-}
+// class FoodList{
+//     constructor(info){
+//         this.fruitList = [info.fruitList];
+//     }
+//     addFood = `${this.fruitList[info.fruitList]}`
+// }
+// const foodInstanceFruits = new FoodList(['Apple','Grape','Tomato'])
+// console.log(foodInstanceFruits.addFood())
 
-const foodListInstance = new Products({foodList: 'Sorvete'});
-console.log(foodListInstance.exemplo());
+class FoodList{
+    constructor(info){
+        this.fruitList = [info.fruitList];
+    }
+}
+const foodInstanceFruits = [new FoodList('Apple'), new FoodList('Tomato'), new FoodList('Grape')]
+console.log(foodInstanceFruits)
