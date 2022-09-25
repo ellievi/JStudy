@@ -8,27 +8,6 @@
 	
 // forIn
 
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .map(item => item.age)
-// .filter(item => item >= 20)
-// .reduce((accumulator, current)=> accumulator+current, 0)
-
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .reduce((accumulator, item)=> [...accumulator, item.age], [])
-// .filter(item => item >= 20)
-
-
-//consumo alto de memoria por ter muitos filtros
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .map(item => item.age)
-// .filter(item => item >=0)
-// .filter(item => item >= 20 && item <=40)
-// .filter(item => item >= 25)
-// .filter(item => item >= 29)
-// //otimizado por aglomerar as condições 
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .map(item => item.age)
-// .filter(item => item >=0 && item >= 20 && item <=40 && item >= 25 && item >= 29)
 
 /**
  * - Filtrar os:
@@ -39,12 +18,13 @@
  *     - 2+ digitos
  *
  * - somar os:
- *      - imapres
+ *      - impares
  *      - pares
  */
  const numbers = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 20, 22, 24, 26, 28, 30, 500, 5002, 4567889,
   ];
+
   /**
    * ordernar:
    *  - maior para menor
