@@ -20,7 +20,7 @@ console.log(' ')
 
 console.log('2 Digitos',numbers.map(item => item).filter(item => item >=10 && item <=99))
 console.log('3 Digitos',numbers.map(item => item).filter(item => item >=100 && item <=999))
-console.log('2+ Digitos',numbers.map(item => item).filter(item => item >=100))
+console.log('2+ Digitos',numbers.map(item => item).filter(item => item >=10))
 
 
 console.log(' ')

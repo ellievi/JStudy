@@ -15,3 +15,5 @@
     'w', 'm', 'N', 'o', 'P', 'q', 'r', 's', 't', 'u',
     'v', 'x', 'c', 'K', 'l', 'a',
   ];
+
+  letters.map((item, index) => console.log(`${item} ${index}`))

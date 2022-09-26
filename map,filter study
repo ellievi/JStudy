@@ -3,6 +3,7 @@
 // .filter(item => item >= 20)
 // .reduce((accumulator, current)=> accumulator+current, 0)
 
+
 // [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
 // .reduce((accumulator, item)=> [...accumulator, item.age], [])
 // .filter(item => item >= 20)
@@ -15,6 +16,7 @@
 // .filter(item => item >= 20 && item <=40)
 // .filter(item => item >= 25)
 // .filter(item => item >= 29)
+
 // //otimizado por aglomerar as condições 
 // [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
 // .map(item => item.age)
