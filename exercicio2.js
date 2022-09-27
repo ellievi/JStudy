@@ -17,3 +17,5 @@
   ];
 
   letters.map((item, index) => console.log(`${item} ${index}`))
+
+  letters.map(item => item).filter(item => item == 'a' || item == 'e' || item == 'i' || item == 'o' || item == 'u')
