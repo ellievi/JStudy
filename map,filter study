@@ -21,3 +21,56 @@
 // [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
 // .map(item => item.age)
 // .filter(item => item >=0 && item >= 20 && item <=40 && item >= 25 && item >= 29)
+
+
+  /**
+   * data.filter(item => typeof item === 'number')
+  .filter(item => !String(item).includes('.'));
+   * ['a','b',2.2,6,34,-34,{name:'bruno'}]
+   *    .filter(item =>typeof item === 'number' && Number.isInteger(item))
+  .reduce((accumulator, current)=> accumulator + current ,0)
+
+ ['a','b',2.2,6,34,-34,{name:'bruno'}]
+  .filter(item =>typeof item === 'number' && !Number.isInteger(item))
+    .reduce((accumulator, current)=> accumulator + current ,0)
+
+    //objetivo
+['a','b',2.2,6,34,-34,{name:'bruno'}]
+    .reduce((accumulator, current)=> 
+       typeof current === 'number' && Number.isInteger(current) ? accumulator + current : accumulator
+       ,0)
+//detalhado
+['a','b',2.2,6,34,-34,{name:'bruno'}]
+    .filter(item => Number.isInteger(item))
+    .reduce((accumulator, current)=>accumulator+current,0)
+
+
+
+    //Quebra a strinf em todas as posicoes
+const listaLetras = 'BrunIIII'.split('')
+//seleciona apenas as letras maiusculas após converter
+//a letra para o charCode usando a funcao charCodeAt na posicao 0 
+//se ela estiver dentro do intervalo 65 & 90
+//retornando uma lista caso a condição seja TRUE
+const letrasMaiusculas = listaLetras
+    .filter( letra => 
+            letra.charCodeAt(0) >= 65 && 
+            letra.charCodeAt(0) <= 90 
+           )
+//contando a lista para ver se contem 1 ou mais itens dentro
+//retoando um BOOLEAN para TRUE ou FALSE
+const contemLetrasMaiusculas = letrasMaiusculas.length >=1
+
+'BrunIIII'
+    .split('')
+    .reduce((accumulator, current)=> 
+            [...accumulator, 
+             current.charCodeAt(0) >= 65 && 
+             current.charCodeAt(0) <= 90 
+               ? true : false ],[])
+    .filter(letter => letter === true)
+    .length >= 1 ? 'SIM CONTEM' : 'NAO CONTEM'
+// reaposta:: 'SIM CONTEM'
+**/
+
+

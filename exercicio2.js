@@ -18,4 +18,4 @@
 
   letters.map((item, index) => console.log(`${item} ${index}`))
 
-  letters.map(item => item).filter(item => item == 'a' || item == 'e' || item == 'i' || item == 'o' || item == 'u')
+  letters.filter(String.fromCharCode(97,101,105,111,117));

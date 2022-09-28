@@ -1,12 +1,12 @@
 /**
-   * Somar os numeros inteiros
-   * Somar os numeros com ponto flutuante
-   * Selecionar as letras apenas
-   * Selecionar os objetos apenas
+   * Somar os numeros inteiros 
+   * Somar os numeros com ponto flutuante 
+   * Selecionar as letras apenas 
+   * Selecionar os objetos apenas 
    * Selecionar letras minusculas
    * Selecionar letras maisculas
-   * Selecionar numeros com pontos flutuantes
-   * Selecionar o nome "XUXA" e exibir sua idade
+   * Selecionar numeros com pontos flutuantes 
+   * Selecionar o nome "XUXA" e exibir sua idade 
    *
    */
  const numbersObject = [
@@ -27,37 +27,50 @@
   ];
 
   const calcInt = numbersObject
-    .map(item => item.value)
-    .filter(item => typeof item === 'number' && Number.isInteger(item))
-    .reduce((acumulator, next) => acumulator + next, 0)
+    .reduce((accumulator, next) => 
+    typeof next === 'object' && typeof next.value === 'number' && Number.isInteger(next.value)
+    ? accumulator + next.value
+    : accumulator, 0)
 
   const calcFloat = numbersObject
-    .map(item => item.value)
-    .filter(item => typeof item === 'number' && !Number.isInteger(item))
-    .reduce((acumulator, next) => acumulator + next, 0)
+  .reduce((accumulator, next) =>
+  typeof next === 'object' && typeof next.value === 'number' && !Number.isInteger(next.value) 
+  ? accumulator + next.value 
+  : accumulator, 0)
+
+  const selectString = numbersObject
+  .map(item => item.value)
+  .filter(item => typeof item === 'string')
+
+  const showObjects = numbersObject
+  .map(item => item.value)
+  .filter(item => typeof item === 'object')
 
 
+  const showFloat = numbersObject
+  .map(item => item.value)
+  .filter(item => typeof item === 'number' && !Number.isInteger(item))
+
+  const selectSmallLetters = numbersObject
+  .map(item => item.value)
+  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
+
+  const selectBigLetters = numbersObject
+  .map(item => item.value)
+  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 97 && item.charCodeAt(0) <= 122)
+
+  const nameX = numbersObject
+  .map(item => item.value)
+  .filter(item => typeof item === 'string' || typeof item === 'number')
+
+  const showNameX = nameX[12]
+
+
+  console.log('Mostrar as letras', selectString)
   console.log('Soma Números Inteiros: ', calcInt )
   console.log('Soma Números Flutuantes: ', calcFloat)
-  /**
-   * data.filter(item => typeof item === 'number')
-  .filter(item => !String(item).includes('.'));
-   * ['a','b',2.2,6,34,-34,{name:'bruno'}]
-   *    .filter(item =>typeof item === 'number' && Number.isInteger(item))
-  .reduce((accumulator, current)=> accumulator + current ,0)
-
- ['a','b',2.2,6,34,-34,{name:'bruno'}]
-  .filter(item =>typeof item === 'number' && !Number.isInteger(item))
-    .reduce((accumulator, current)=> accumulator + current ,0)
-
-
-    //objetivo
-['a','b',2.2,6,34,-34,{name:'bruno'}]
-    .reduce((accumulator, current)=> 
-       typeof current === 'number' && Number.isInteger(current) ? accumulator + current : accumulator
-       ,0)
-//detalhado
-['a','b',2.2,6,34,-34,{name:'bruno'}]
-    .filter(item => Number.isInteger(item))
-    .reduce((accumulator, current)=>accumulator+current,0)
-**/
+  console.log('Objetos: ', showObjects)
+  console.log('Letras minúsculas: ', selectSmallLetters)
+  console.log('Letras maiúsculas: ', selectBigLetters)
+  console.log('Números flutuantes: ', showFloat)
+  console.log('Nome + idade:', showNameX.toUpperCase())
