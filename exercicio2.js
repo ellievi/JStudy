@@ -20,7 +20,7 @@
   .filter(item => typeof item === 'string' && item.charCodeAt(0) === 97 || item.charCodeAt(0) === 101 || item.charCodeAt(0) === 105 || item.charCodeAt(0) === 111 || item.charCodeAt(0) === 117)
 
   const showConsoantes = letters
-  .filter(item => typeof item === 'string' && item != showVogais.item && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 122)
+  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 122 && item.charCodeAt(0) != 97 && item.charCodeAt(0) !=101 && item.charCodeAt(0) != 105 && item.charCodeAt(0) != 111 && item.charCodeAt(0) != 117 )
 
   const showMaiusculas = letters
   .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
@@ -35,9 +35,9 @@
   .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
 
 
-  console.log(showVogais)
-  console.log(showConsoantes)
-  console.log(showMaiusculas)
-  console.log(showMinusculas)
-  console.log(showMinusculasVogais)
-  console.log(showMaisculasConsoantes)
+  console.log('Vogais', showVogais)
+  console.log('Consoantes', showConsoantes)
+  console.log('Maiúsculas', showMaiusculas)
+  console.log('Minúsculas', showMinusculas)
+  console.log('Minúsculas + vogais', showMinusculasVogais)
+  console.log('Maiúsculas + consoantes', showMaisculasConsoantes)
