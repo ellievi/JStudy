@@ -25,16 +25,32 @@
 
 
   const showVogais = letters
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) === 97 || item.charCodeAt(0) === 101 || item.charCodeAt(0) === 105 || item.charCodeAt(0) === 111 || item.charCodeAt(0) === 117)
+  .filter(item => typeof item === 'string' 
+    && item.charCodeAt(0) === 97 
+    || item.charCodeAt(0) === 101 
+    || item.charCodeAt(0) === 105 
+    || item.charCodeAt(0) === 111 
+    || item.charCodeAt(0) === 117)
 
   const showConsoantes = letters
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 122 && item.charCodeAt(0) != 97 && item.charCodeAt(0) !=101 && item.charCodeAt(0) != 105 && item.charCodeAt(0) != 111 && item.charCodeAt(0) != 117 )
+  .filter(item => typeof item === 'string' 
+    && item.charCodeAt(0) >= 65 
+    && item.charCodeAt(0) <= 122 
+    && item.charCodeAt(0) != 97 
+    && item.charCodeAt(0) !=101 
+    && item.charCodeAt(0) != 105 
+    && item.charCodeAt(0) != 111 
+    && item.charCodeAt(0) != 117 )
 
   const showMaiusculas = letters
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
+  .filter(item => typeof item === 'string' 
+    && item.charCodeAt(0) >= 65 
+    && item.charCodeAt(0) <= 90)
 
   const showMinusculas = letters
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 97 && item.charCodeAt(0) <= 122)
+  .filter(item => typeof item === 'string' 
+    && item.charCodeAt(0) >= 97 
+    && item.charCodeAt(0) <= 122)
 
   const showMinusculasVogais = letters
   .filter(item => typeof item === 'string' 
@@ -47,7 +63,9 @@
     && item.charCodeAt(0) <= 122)
 
   const showMaisculasConsoantes = letters
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
+  .filter(item => typeof item === 'string' 
+    && item.charCodeAt(0) >= 65 
+    && item.charCodeAt(0) <= 90)
 
 
   console.log('Maior para a menor: ', biggestToSmallest)

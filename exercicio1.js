@@ -15,30 +15,34 @@
   ];
 
 console.log('PARES', numbers
-.filter(item => item %2 == 0))
+  .filter(item => item %2 == 0))
 
-console.log('ÍMPARES', numbers
-.filter(item => item %2 != 0))
-console.log(' ')
+  console.log('ÍMPARES', numbers
+  .filter(item => item %2 != 0))
+  console.log(' ')
 
-console.log('2 Digitos',numbers
-.map(item => item)
-.filter(item => item >=10 && item <=99))
+  console.log('2 Digitos',numbers
+  .map(item => item)
+  .filter(item => item >=10 
+  && item <=99))
 
-console.log('3 Digitos',numbers
-.map(item => item)
-.filter(item => item >=100 && item <=999))
+  console.log('3 Digitos',numbers
+  .map(item => item)
+  .filter(item => item >=100 
+  && item <=999))
 
-console.log('2+ Digitos',numbers
-.map(item => item)
-.filter(item => item >=10))
+  console.log('2+ Digitos',numbers
+  .map(item => item)
+  .filter(item => item >=10))
 
-console.log(' ')
+  console.log(' ')
 
-console.log('Soma dos pares', numbers
-.map(item => item)
-.filter(item => item %2 == 0)
-.reduce((accumulator, next) => accumulator + next, 0))
+  console.log('Soma dos pares', numbers
+  .map(item => item)
+  .filter(item => item %2 == 0)
+  .reduce((accumulator, next) => 
+  accumulator + next, 0))
 
-console.log('Soma dos ímpares', numbers
-.reduce((accumulator, next) => accumulator + next, 0))
+  console.log('Soma dos ímpares', numbers
+  .reduce((accumulator, next) => 
+  accumulator + next, 0))

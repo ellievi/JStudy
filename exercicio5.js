@@ -28,15 +28,19 @@
 
   const calcInt = numbersObject
     .reduce((accumulator, next) => 
-    typeof next === 'object' && typeof next.value === 'number' && Number.isInteger(next.value)
+    typeof next === 'object' 
+    && typeof next.value === 'number' 
+    && Number.isInteger(next.value)
     ? accumulator + next.value
     : accumulator, 0)
 
   const calcFloat = numbersObject
-  .reduce((accumulator, next) =>
-  typeof next === 'object' && typeof next.value === 'number' && !Number.isInteger(next.value) 
-  ? accumulator + next.value 
-  : accumulator, 0)
+    .reduce((accumulator, next) =>
+    typeof next === 'object' 
+    && typeof next.value === 'number' 
+    && !Number.isInteger(next.value) 
+    ? accumulator + next.value 
+    : accumulator, 0)
 
   const selectString = numbersObject
   .map(item => item.value)
@@ -49,19 +53,25 @@
 
   const showFloat = numbersObject
   .map(item => item.value)
-  .filter(item => typeof item === 'number' && !Number.isInteger(item))
+  .filter(item => typeof item === 'number' 
+  && !Number.isInteger(item))
 
   const selectSmallLetters = numbersObject
   .map(item => item.value)
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
+  .filter(item => typeof item === 'string' 
+  && item.charCodeAt(0) >= 65 
+  && item.charCodeAt(0) <= 90)
 
   const selectBigLetters = numbersObject
   .map(item => item.value)
-  .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 97 && item.charCodeAt(0) <= 122)
+  .filter(item => typeof item === 'string' 
+    && item.charCodeAt(0) >= 97 
+    && item.charCodeAt(0) <= 122)
 
   const nameX = numbersObject
   .map(item => item.value)
-  .filter(item => typeof item === 'string' || typeof item === 'number')
+  .filter(item => typeof item === 'string' 
+  || typeof item === 'number')
 
   const showNameX = nameX[12]
 

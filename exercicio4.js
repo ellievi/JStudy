@@ -13,22 +13,26 @@
   console.log('Somar Ímpares:' ,numbersFloat
   .map(item => item)
   .filter(item => item%2 != 0)
-  .reduce((accumulator, next) => accumulator + next, 0));
+  .reduce((accumulator, next) => 
+    accumulator + next, 0));
 
   console.log('Somar Pares:', numbersFloat
   .map(item => item)
   .filter(item => item%2 == 0)
-  .reduce((accumulator, next) => accumulator + next, 0));
+  .reduce((accumulator, next) => 
+    accumulator + next, 0));
 
   console.log('Somar maiores que 9:' ,numbersFloat
   .map(item => item)
   .filter(item => item > 9.0)
-  .reduce((accumulator, next) => accumulator + next, 0));
+  .reduce((accumulator, next) => 
+    accumulator + next, 0));
 
   console.log('Multiplicar Ímpares:' ,numbersFloat
   .map(item => item)
   .filter(item => item%2 != 0)
-  .reduce((accumulator, next) => accumulator * next, 1));
+  .reduce((accumulator, next) => 
+    accumulator * next, 1));
 
   console.log('Números maiores que 9:' ,numbersFloat
   .map(item => item)
