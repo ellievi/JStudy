@@ -33,4 +33,6 @@
   const friendage1 = friends[0].age
   const friendage2 = friends[1].age
 
-  console.log(`Meu nome é ${nome} e minha idade é ${age}. Gosto de ${hobbie} e falo ${languages[0]} e ${languages[1]} fluentemente. Meus amigos são ${friend1} e ${friend2} de ${friendage1} e ${friendage2} anos respectivamente`)
+  console.log(`Meu nome é ${nome} e minha idade é ${age}. 
+  Gosto de ${hobbie} e falo ${languages[0]} e ${languages[1]} fluentemente. 
+  Meus amigos são ${friend1} e ${friend2} de ${friendage1} e ${friendage2} anos respectivamente`)
