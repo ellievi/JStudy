@@ -71,6 +71,40 @@ const contemLetrasMaiusculas = letrasMaiusculas.length >=1
     .filter(letter => letter === true)
     .length >= 1 ? 'SIM CONTEM' : 'NAO CONTEM'
 // reaposta:: 'SIM CONTEM'
+
+
+EXAMPLE OF A ''REPLACE'' WITH ARRAY
+var index = letters.indexOf('y');
+if (~index) { letters[index] = 'a'; }
+
+const letters = [
+    'y', 'b', 'z', 'D', 'e', 'f', 'g', 'h', 'i', 'j',
+    'w', 'm', 'N', 'o', 'P', 'q', 'r', 's', 't', 'u',
+    'v', 'x', 'c', 'K', 'l', 'a',
+  ];
+  const showVogais1 = letters
+    .filter(item => 
+        typeof item === 'string' 
+        && item.charCodeAt(0) === 97 
+        || item.charCodeAt(0) === 101 
+        || item.charCodeAt(0) === 105 
+        || item.charCodeAt(0) === 111 
+        || item.charCodeAt(0) === 117
+    )
+  const showVogais2 = letters
+    .filter(item => typeof item === 'string' 
+        &&  ['a','A'].includes(item) 
+        ||  ['e','E'].includes(item) 
+        ||  ['i','I'].includes(item) 
+        ||  ['o','O'].includes(item) 
+        ||  ['u','U'].includes(item))
+  const showVogais3 = letters
+    .filter(item => typeof item === 'string' 
+        &&  ['a','A','e','E','i','I','o','O','u','U'].includes(item))
+
+        letters
+ .filter(item => typeof item === 'string' 
+ && ['a','e','i','o','u'].includes(item))
 **/
 
 
