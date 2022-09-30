@@ -36,11 +36,7 @@
   .filter(item => typeof item === 'string' 
     && item.charCodeAt(0) >= 65 
     && item.charCodeAt(0) <= 122 
-    && item.charCodeAt(0) != 97 
-    && item.charCodeAt(0) !=101 
-    && item.charCodeAt(0) != 105 
-    && item.charCodeAt(0) != 111 
-    && item.charCodeAt(0) != 117 )
+    && ['a','e','i','o','u'].includes(item) === false)
 
   const showMaiusculas = letters
   .filter(item => typeof item === 'string' 
@@ -53,14 +49,10 @@
     && item.charCodeAt(0) <= 122)
 
   const showMinusculasVogais = letters
-  .filter(item => typeof item === 'string' 
-    && item.charCodeAt(0) === 97 
-    || item.charCodeAt(0) === 101 
-    || item.charCodeAt(0) === 105 
-    || item.charCodeAt(0) === 111 
-    || item.charCodeAt(0) === 117 
-    && item.charCodeAt(0) >= 97 
-    && item.charCodeAt(0) <= 122)
+  .join('')
+  .match(/[a-z]/gm)
+  .filter(letter=> ['a','e','i','o','u']
+  .includes(letter) )
 
   const showMaisculasConsoantes = letters
   .filter(item => typeof item === 'string' 

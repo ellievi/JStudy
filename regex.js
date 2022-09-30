@@ -52,13 +52,7 @@
     && item.charCodeAt(0) <= 122)
   const showMaisculasConsoantes = letters
   .filter(item => typeof item === 'string' && item.charCodeAt(0) >= 65 && item.charCodeAt(0) <= 90)
-  console.log('Maior para a menor: ', biggestToSmallest)
-  console.log('Menor para a maior: ', smallestToBiggest)
-  console.log('Vogais', showVogais)
-  console.log('Consoantes', showConsoantes)
-  console.log('Maiúsculas', showMaiusculas)
-  console.log('Minúsculas', showMinusculas)
-  console.log('Minúsculas + vogais', showMinusculasVogais)
+
   
   const showMinusculasVogaisRegex = letters
     .join('')
