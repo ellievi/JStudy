@@ -1,34 +1,19 @@
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .map(item => item.age)
-// .filter(item => item >= 20)
-// .reduce((accumulator, current)=> accumulator+current, 0)
+/** 
+[{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
+.reduce((accumulator, item)=> [...accumulator, item.age], [])
+.filter(item => item >= 20)
+
+otimizado por aglomerar as condições 
+[{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
+.map(item => item.age)
+.filter(item => item >=0 && item >= 20 && item <=40 && item >= 25 && item >= 29)
 
 
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .reduce((accumulator, item)=> [...accumulator, item.age], [])
-// .filter(item => item >= 20)
-
-
-//consumo alto de memoria por ter muitos filtros
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .map(item => item.age)
-// .filter(item => item >=0)
-// .filter(item => item >= 20 && item <=40)
-// .filter(item => item >= 25)
-// .filter(item => item >= 29)
-
-// //otimizado por aglomerar as condições 
-// [{name:'Bruno',age:20},{name:'carlos',age:15},{name:'Elisama',age:30}]
-// .map(item => item.age)
-// .filter(item => item >=0 && item >= 20 && item <=40 && item >= 25 && item >= 29)
-
-
-  /**
-   * data.filter(item => typeof item === 'number')
-  .filter(item => !String(item).includes('.'));
-   * ['a','b',2.2,6,34,-34,{name:'bruno'}]
-   *    .filter(item =>typeof item === 'number' && Number.isInteger(item))
-  .reduce((accumulator, current)=> accumulator + current ,0)
+data.filter(item => typeof item === 'number')
+.filter(item => !String(item).includes('.'));
+['a','b',2.2,6,34,-34,{name:'bruno'}]
+.filter(item =>typeof item === 'number' && Number.isInteger(item))
+.reduce((accumulator, current)=> accumulator + current ,0)
 
  ['a','b',2.2,6,34,-34,{name:'bruno'}]
   .filter(item =>typeof item === 'number' && !Number.isInteger(item))
@@ -46,19 +31,19 @@
 
 
 
-    //Quebra a strinf em todas as posicoes
+Quebra a strinf em todas as posicoes
 const listaLetras = 'BrunIIII'.split('')
-//seleciona apenas as letras maiusculas após converter
-//a letra para o charCode usando a funcao charCodeAt na posicao 0 
-//se ela estiver dentro do intervalo 65 & 90
-//retornando uma lista caso a condição seja TRUE
+seleciona apenas as letras maiusculas após converter
+a letra para o charCode usando a funcao charCodeAt na posicao 0 
+se ela estiver dentro do intervalo 65 & 90
+retornando uma lista caso a condição seja TRUE
 const letrasMaiusculas = listaLetras
     .filter( letra => 
             letra.charCodeAt(0) >= 65 && 
             letra.charCodeAt(0) <= 90 
            )
-//contando a lista para ver se contem 1 ou mais itens dentro
-//retoando um BOOLEAN para TRUE ou FALSE
+contando a lista para ver se contem 1 ou mais itens dentro
+retoando um BOOLEAN para TRUE ou FALSE
 const contemLetrasMaiusculas = letrasMaiusculas.length >=1
 
 'BrunIIII'
