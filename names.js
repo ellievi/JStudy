@@ -1,7 +1,4 @@
-export default class Names{
-    constructor(info){
-        this.name = info.name;
-    }
-    
-    userName = () => `${this.name}`;
-};
+export const nameObject = {
+    // getName: prompt("Digite seu nome:"),  
+    greeting: 'Bem vindo! Agora são'
+}

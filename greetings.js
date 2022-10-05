@@ -1,8 +1,10 @@
 import Hours from './classhours.js';
+import { goodDay } from './functionHours.js';
+import { nameObject } from './names.js';
 
 // Hours
 const instanceHour = new Hours()
 const showHour = instanceHour.getHour()
 
 //console
-console.log('Olá, agora são', showHour, 'horas.', goodDay())
+console.log(nameObject.greeting, showHour, 'horas.', goodDay())

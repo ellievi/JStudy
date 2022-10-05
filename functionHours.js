@@ -1,5 +1,3 @@
-
-
 import Hours from './classhours.js'
 
 export const goodDay= () => {
@@ -7,8 +5,9 @@ export const goodDay= () => {
     const hoursInstance = new Hours()
     const hour = hoursInstance.getHour();
 
-    return hour >=5 && hour <=11 ? 'Bom dia!' 
-    : hour >=12 && hour <=18 
+    return hour >= 5 && hour <= 11 
+    ? 'Bom dia!' 
+    : hour >= 12 && hour <= 18 
     ? 'Boa tarde!' 
     : hour >= 18 && hour <= 23 || hour == 0
     ? 'Boa noite!'
