@@ -1,0 +1,23 @@
+{
+  "name": "jstudy",
+  "version": "1.0.0",
+  "description": "Repository for my study journey of JavaScript.",
+  "main": "greetings.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellievi/JStudy.git"
+  },
+  "keywords": [
+    "iestudy"
+  ],
+  "author": "Elisama",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ellievi/JStudy/issues"
+  },
+  "homepage": "https://github.com/ellievi/JStudy#readme"
+}
