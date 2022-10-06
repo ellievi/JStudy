@@ -1,5 +1,5 @@
 //submit
-export const submitForm = (event) => {
+const submitForm = (event) => {
 
     // picking the event info instance -the form entries-
     const formData = new FormData(event.target);
