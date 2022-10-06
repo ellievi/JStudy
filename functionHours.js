@@ -1,4 +1,5 @@
 import Hours from './classhours.js'
+import { dayObject } from './dayObj.js';
 
 export const goodDay= () => {
 
@@ -6,12 +7,12 @@ export const goodDay= () => {
     const hour = hoursInstance.getHour();
 
     return hour >= 5 && hour <= 11 
-    ? 'Bom dia!' 
+    ? `Bom dia! ${dayObject.greetingDay}`
     : hour >= 12 && hour <= 18 
-    ? 'Boa tarde!' 
+    ? `Boa tarde! ${dayObject.greetingEvening}` 
     : hour >= 18 && hour <= 23 || hour == 0
-    ? 'Boa noite!'
-    : 'Boa madrugada!'
+    ? `Boa noite! ${dayObject.greetingNight}`
+    : `Boa madrugada! ${dayObject.greetingDawn}`
 }
 
 

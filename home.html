@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
     <title>ClassIE</title>
 </head>
 <body>
-    <h1 style="color: rgb(235, 179, 216);">Greeting</h1>
+    <h1>Greeting</h1>
+
+    <form onsubmit="return submitForm(event)">
+        <label id="label" for="name"></label>Digite seu nome
+        <input type="text" name="name" id="name" placeholder="Nome" required>
+
+        <input type="submit" value="Submit" id="submit-btn">
+    </form>
 
 </body>
 <script type="module" src="greetings.js"></script>
+<script src="submit.js"></script>
 </html>
