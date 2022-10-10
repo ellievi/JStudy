@@ -1,0 +1,24 @@
+{
+  "name": "jstudy",
+  "version": "1.0.0",
+  "description": "Repository for my study journey of JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellievi/JStudy.git"
+  },
+  "author": "Elisama",
+  "license": "Unlicense",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ellievi/JStudy/issues"
+  },
+  "homepage": "https://github.com/ellievi/JStudy#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "node-fetch": "^3.2.10"
+  }
+}
